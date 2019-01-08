@@ -1,6 +1,22 @@
 <template>
   <div id="app">
-    {{ msg }}
+    <nav>
+      <ul>
+        <li>
+          <router-link :to="{name: 'index'}">index</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'space'}">space</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'structure'}">structure</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'div'}">div</router-link>
+        </li>
+      </ul>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -15,15 +31,13 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-div:last-child
-  border: 1px solid green
-#app
-  display: flex
-  #left
-    width: 200px
-    background: red
-  #content
-    flex: 1
-    text-align: right
+<style lang="stylus" scoped>
+nav
+  ul
+    display: flex
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      color: red
 </style>
